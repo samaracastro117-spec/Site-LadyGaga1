@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lady Gaga, voice, fashion and freedom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Open+Sans:wght@400&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-glam-black: #000000;
+            --color-pure-white: #FFFFFF;
+            --font-h1: 'Montserrat', sans-serif;
+            --font-h2: 'Montserrat', sans-serif;
+            --font-body: 'Montserrat', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-glam-black);
+            color: var(--color-pure-white);
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .header-topbar {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 10px 0;
+            border-bottom: 1px solid var(--color-pure-white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .topbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .language-nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .language-nav li { margin-left: 15px; }
+
+        .language-nav a {
+            color: var(--color-pure-white);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .language-nav a:hover { color: #ccc; }
+
+        .accessibility-controls button {
+            background-color: var(--color-glam-black);
+            color: var(--color-pure-white);
+            border: 1px solid var(--color-pure-white);
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px 0;
+            margin: 0;
+        }
+
+        nav a {
+            text-transform: uppercase;
+            color: var(--color-pure-white);
+            font-weight: 700;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover { border-bottom: 2px solid var(--color-pure-white); }
+
+        .hero-banner {
+            background-image: url(./BANNER-GAGA.jpg);
+            background-size: cover;
+            background-position: center;
+            min-height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+        }
+
+        .banner-content {
+            position: relative;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .banner-content h1 {
+            font-family: var(--font-h1);
+            font-size: 48px;
+            text-shadow: 0 0 10px var(--color-pure-white);
+        }
+
+        .cta-button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: var(--color-pure-white);
+            color: var(--color-glam-black);
+            border-radius: 40px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 32px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--color-pure-white);
+            padding-bottom: 10px;
+        }
+
+        .high-contrast {
+            background-color: var(--color-pure-white) !important;
+            color: var(--color-glam-black) !important;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header-topbar">
+        <div class="topbar-content">
+            <div class="language-nav">
+                <ul>
+                    <li><a href="/index_pt.html" class="active">PT</a></li>
+                    <li><a href="/index_en.html">ENG</a></li>
+                    <li><a href="/index_esp.html">ESP</a></li>
+                </ul>
+            </div>
+
+            <div class="accessibility-controls">
+                <button onclick="toggleContrast()">Contraste</button>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#Inicio"> Home </a></li>
+            <li><a href="#Sobre este site"> About this website </a></li>
+            <li><a href="#Música"> Music </a></li>
+            <li><a href="#Moda"> Fashion </a></li>
+            <li><a href="#Legado"> Legacy </a></li>
+        </ul>
+    </nav>
+
+    <section id="inicio" class="hero-banner">
+        <div class="banner-content">
+            <h1>Lady Gaga</h1>
+            <p>The voice that changed generations.</p>
+            <img src="./BANNER-GAGA.jpg">
+        </div>
+    </section>
+
+    <section id="Sobre este site">
+        <h2>About this website</h2>
+        <p>Welcome to our space dedicated to the incomparable Lady Gaga. We explore her profound contribution to advancing LGBTQIA+ rights, her transformative impact on fashion, and the overwhelming energy of her performance in Rio de Janeiro. Whether you are a longtime fan or a new admirer, here we celebrate the union of music, art, and the message that Gaga represents.</p>
+        <img src="./Lady_Gaga_at_the_White_House_in_2023_(3) - Copia.jpg" alt="Lady Gaga Biography" width="100%">
+    </section>
+
+    <section id="Música">
+        <h2>Gaga and activism</h2>
+        <p>Since the beginning of her career, Lady Gaga has been a powerful voice in defense of the LGBTQIA+ community. Her message of acceptance echoes in every speech, song, and gesture. In the Born This Way Ball, she not only sang about love and freedom — she embodied them.
+Through the Born This Way Foundation, Gaga inspires millions to promote empathy, mental health, and equality. She shows the world that art can — and should — be a safe space for everyone.</p>
+        <img src="./LGBTQIA+GAGA.jpg" alt="Lady Gaga: Gaga and activism" width="100%">
+    </section>
+
+    <section id="Moda">
+        <h2>Fashion</h2>
+        <p>From a dress made of meat to futuristic outfits at the MET Gala, Lady Gaga turns fashion into a mirror of her artistic soul. Each look is a narrative — sometimes provocative, sometimes poetic, always authentic.
+Amid fabrics, performance, and attitude, she redefines what beauty is, breaking standards and opening space for freedom of expression.
+Gaga doesn’t follow trends: she creates visual universes that inspire generations.</p>
+        <img src="./GAGA-ROUPA-CARNE.webp" alt="Lady Gaga Fashion" width="100%">
+    </section>
+
+    <section id="Legado">
+        <h2>Legacy</h2>
+        <p>Lady Gaga has gone beyond the boundaries of music to become a cultural icon. Among awards, records, and applause, her greatest trophy is the love of her fans — the Little Monsters.
+From magazine covers to stages around the world, her journey is marked by courage, reinvention, and empathy. Gaga doesn’t just make history: she inspires people to write their own.</p>
+        <img src="./LEGADO-GAGA.webp" alt="Lady Gaga Legacy" width="100%">
+    </section>
+
+    <script>
+        function toggleContrast() {
+            document.body.classList.toggle('high-contrast');
+        }
+    </script>
+
+</body>
+</html>
