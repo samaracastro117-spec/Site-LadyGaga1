@@ -1,38 +1,37 @@
 <!DOCTYPE html>
-<html lang="esp">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lady Gaga: Voz, Moda e Liberdade</title>
+    <title>Lady Gaga: Voz, Moda y Libertad</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Open+Sans:wght@400&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --color-glam-black: #000000;
-            --color-pure-white: #FFFFFF;
-            --font-h1: 'Montserrat', sans-serif;
-            --font-h2: 'Montserrat', sans-serif;
+            --black: #000;
+            --white: #fff;
             --font-body: 'Montserrat', sans-serif;
         }
 
         body {
             font-family: var(--font-body);
-            background-color: var(--color-glam-black);
-            color: var(--color-pure-white);
+            background-color: var(--black);
+            color: var(--white);
             margin: 0;
             padding: 0;
-            transition: background-color 0.3s, color 0.3s;
+            transition: background-color .3s, color .3s;
         }
 
         .header-topbar {
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: #000; 
             padding: 10px 0;
-            border-bottom: 1px solid var(--color-pure-white);
+            border-bottom: 1px solid var(--white);
             position: sticky;
             top: 0;
             z-index: 1000;
+            transition: background-color .3s, color .3s;
         }
 
         .topbar-content {
@@ -49,23 +48,30 @@
             padding: 0;
         }
 
-        .language-nav li { margin-left: 15px; }
-
-        .language-nav a {
-            color: var(--color-pure-white);
-            font-weight: 600;
-            text-transform: uppercase;
+        .language-nav li {
+            margin-left: 15px;
         }
 
-        .language-nav a:hover { color: #ccc; }
+        .language-nav a {
+            color: var(--white);
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: color .3s;
+        }
 
         .accessibility-controls button {
-            background-color: var(--color-glam-black);
-            color: var(--color-pure-white);
-            border: 1px solid var(--color-pure-white);
+            background-color: var(--black);
+            color: var(--white);
+            border: 1px solid var(--white);
             padding: 6px 12px;
             border-radius: 4px;
             cursor: pointer;
+            transition: background-color .3s, color .3s, border-color .3s;
+        }
+
+        nav {
+            background-color: #000;
+            transition: background-color .3s;
         }
 
         nav ul {
@@ -79,12 +85,15 @@
 
         nav a {
             text-transform: uppercase;
-            color: var(--color-pure-white);
+            color: var(--white);
             font-weight: 700;
             border-bottom: 2px solid transparent;
+            transition: color .3s, border-color .3s;
         }
 
-        nav a:hover { border-bottom: 2px solid var(--color-pure-white); }
+        nav a:hover {
+            border-bottom: 2px solid var(--white);
+        }
 
         .hero-banner {
             background-image: url(./BANNER-GAGA.jpg);
@@ -111,16 +120,15 @@
         }
 
         .banner-content h1 {
-            font-family: var(--font-h1);
             font-size: 48px;
-            text-shadow: 0 0 10px var(--color-pure-white);
+            text-shadow: 0 0 10px var(--white);
         }
 
         .cta-button {
             margin-top: 20px;
             padding: 15px 30px;
-            background-color: var(--color-pure-white);
-            color: var(--color-glam-black);
+            background-color: var(--white);
+            color: var(--black);
             border-radius: 40px;
             font-weight: 700;
             cursor: pointer;
@@ -136,87 +144,118 @@
             font-size: 32px;
             text-transform: uppercase;
             margin-bottom: 20px;
-            border-bottom: 2px solid var(--color-pure-white);
+            border-bottom: 2px solid var(--white);
             padding-bottom: 10px;
+            transition: border-color .3s;
         }
 
         .high-contrast {
-            background-color: var(--color-pure-white) !important;
-            color: var(--color-glam-black) !important;
+            background-color: var(--white);
+            color: var(--black);
         }
 
+        .high-contrast .header-topbar {
+            background-color: #e5e5e5;
+            border-color: var(--black);
+        }
+
+        .high-contrast nav {
+            background-color: #e5e5e5;
+        }
+
+        .high-contrast nav a {
+            color: var(--black);
+        }
+
+        .high-contrast nav a:hover {
+            border-color: var(--black);
+        }
+
+        .high-contrast .language-nav a {
+            color: var(--black);
+        }
+
+        .high-contrast .accessibility-controls button {
+            background-color: var(--white);
+            color: var(--black);
+            border-color: var(--black);
+        }
+
+        .high-contrast h2 {
+            border-color: var(--black);
+        }
     </style>
 </head>
+
 <body>
 
-    <header class="header-topbar">
-        <div class="topbar-content">
-            <div class="language-nav">
-                <ul>
-                    <li><a href="/index_esp.html" class="active">ESP</a></li>
-                    <li><a href="/index_en.html">ENG</a></li>
-                    <li><a href="/sanmara.html">PT</a></li>
-                </ul>
-            </div>
-
-            <div class="accessibility-controls">
-                <button onclick="toggleContrast()">Contraste</button>
-            </div>
+<header class="header-topbar">
+    <div class="topbar-content">
+        <div class="language-nav">
+            <ul>
+                <li><a href="/index_pt.html">PT</a></li>
+                <li><a href="/index_en.html">ENG</a></li>
+                <li><a href="/index_esp.html" class="active">ESP</a></li>
+            </ul>
         </div>
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="#Inicio">Início</a></li>
-            <li><a href="#Sobre este site">Sobre este site</a></li>
-            <li><a href="#Música">Música</a></li>
-            <li><a href="#Moda">Moda</a></li>
-            <li><a href="#Legado">Prêmios</a></li>
-        </ul>
-    </nav>
-
-    <section id="inicio" class="hero-banner">
-        <div class="banner-content">
-            <h1>Lady Gaga</h1>
-            <p>A voz que mudou gerações.</p>
-            <img src="./BANNER-GAGA.jpg">
+        <div class="accessibility-controls">
+            <button onclick="toggleContrast()">Contraste</button>
         </div>
-    </section>
+    </div>
+</header>
 
-    <section id="Sobre este site">
-        <h2>Sobre este site</h2>
-        <p>Bem-vindo(a) ao nosso espaço dedicado à incomparável Lady Gaga. Exploramos sua profunda contribuição no avanço dos direitos LGBTQIA+, seu impacto transformador na moda e a energia esmagadora de sua performance no Rio de Janeiro. Seja você tão de longa data ou novo admirador, aqui celebramos a união da música, arte e mensagem que Gaga representa.</p>
-        <img src="./Lady_Gaga_at_the_White_House_in_2023_(3).jpg" alt="Lady Gaga Biografia" width="100%">
-    </section>
+<nav>
+    <ul>
+        <li><a href="#Inicio">Inicio</a></li>
+        <li><a href="#Sobre">Sobre este sitio</a></li>
+        <li><a href="#Musica">Música</a></li>
+        <li><a href="#Moda">Moda</a></li>
+        <li><a href="#Legado">Legado</a></li>
+    </ul>
+</nav>
 
-    <section id="Música">
-        <h2>Gaga e o ativismo</h2>
-        <p>Desde o início de sua carreira, Lady Gaga tem sido uma voz poderosa em defesa da comunidade LGBTQIA+. Sua mensagem de aceitação ecoa em cada discurso, música e gesto. No Born This Way Ball, ela não apenas cantou sobre amor e liberdade - ela os personificou.
-Com a Born This Way Foundation, Gaga inspira milhões a promover empatia, saúde mental e igualdade. Ela mostra ao mundo que a arte pode
-— e deve — ser um espaço seguro para todos.</p>
-        <img src="./LGBTQIA+GAGA.jpg" alt="Lady Gaga: Gaga e o ativismo" width="100%">
-    </section>
+<section id="Inicio" class="hero-banner">
+    <div class="banner-content">
+        <h1>Lady Gaga</h1>
+        <p>La voz que cambió generaciones.</p>
+        <img src="./BANNER-GAGA.jpg">
+    </div>
+</section>
 
-    <section id="Moda">
-        <h2>Moda</h2>
-        <p>De um vestido feito de carne a trajes futuristas no MET Gala, Lady Gaga faz da moda um espelho de sua alma artística. Cada look é uma narrativa - ora provocadora, ora poética, sempre autêntica.
-Entre tecidos, performance e atitude, ela redefine o que é beleza, rompendo padrões e abrindo espaço para a liberdade de expressão.
-Gaga não segue tendências: ela cria universos visuais que inspiram gerações.</p>
-        <img src="./GAGA-ROUPA-CARNE.webp" alt="Lady Gaga Moda" width="100%">
-    </section>
+<section id="Sobre">
+    <h2>Sobre este sitio</h2>
+    <p>Bienvenido(a) a nuestro espacio dedicado a la incomparable Lady Gaga. Exploramos su profunda contribución al avance de los derechos LGBTQIA+, su impacto transformador en la moda y la energía abrumadora de su presentación en Río de Janeiro. Seas fan de largo tiempo o un nuevo admirador, aquí celebramos la unión de música, arte y el mensaje que Gaga representa.</p>
+    <img src="./Lady_Gaga_at_the_White_House_in_2023_(3).jpg" width="100%">
+</section>
 
-    <section id="Legado">
-        <h2>Prêmios</h2>
-        <p>Lady Gaga ultrapassou os limites da música para se tornar um ícone cultural. Entre prêmios, recordes e aplausos, seu maior troféu é o amor dos fãs - os Little Monsters.
-Das capas de revistas aos palcos do mundo, sua trajetória é marcada por coragem, reinvenção e empatia. Gaga não apenas faz história: ela inspira pessoas a escreverem as suas próprias.</p>
-        <img src="./LEGADO-GAGA.webp" alt="Lady Gaga Legado" width="100%">
-    </section>
+<section id="Musica">
+    <h2>Gaga y el activismo</h2>
+    <p>Desde el inicio de su carrera, Lady Gaga ha sido una voz poderosa en defensa de la comunidad LGBTQIA+. Su mensaje de aceptación resuena en cada discurso, canción y gesto. En el Born This Way Ball, no solo cantó sobre amor y libertad, sino que los personificó.
+    Con la Born This Way Foundation, Gaga inspira a millones a promover empatía, salud mental e igualdad. Ella demuestra que el arte puede —y debe— ser un espacio seguro para todos.</p>
+    <img src="./LGBTQIA+GAGA.jpg" width="100%">
+</section>
 
-    <script>
-        function toggleContrast() {
-            document.body.classList.toggle('high-contrast');
-        }
-    </script>
+<section id="Moda">
+    <h2>Moda</h2>
+    <p>Desde un vestido hecho de carne hasta trajes futuristas en la MET Gala, Lady Gaga convierte la moda en un reflejo de su alma artística. Cada look es una narrativa: a veces provocadora, a veces poética, siempre auténtica.
+    Entre telas, performance y actitud, redefine lo que es la belleza, rompiendo barreras y abriendo espacio para la libertad de expresión.
+    Gaga no sigue tendencias: crea universos visuales que inspiran generaciones.</p>
+    <img src="./GAGA-ROUPA-CARNE.webp" width="100%">
+</section>
+
+<section id="Legado">
+    <h2>Legado</h2>
+    <p>Lady Gaga ha superado los límites de la música para convertirse en un ícono cultural. Entre premios, récords y aplausos, su mayor trofeo es el amor de sus fans: los Little Monsters.
+    Desde portadas de revistas hasta los escenarios del mundo, su trayectoria está marcada por valentía, reinvención y empatía. Gaga no solo hace historia: inspira a otros a escribir la suya.</p>
+    <img src="./LEGADO-GAGA.webp" width="100%">
+</section>
+
+<script>
+    function toggleContrast() {
+        document.body.classList.toggle("high-contrast");
+    }
+</script>
 
 </body>
 </html>
